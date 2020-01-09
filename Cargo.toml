@@ -1,0 +1,21 @@
+[package]
+name = "bench-blake3-vs-polyval"
+version = "0.1.0"
+authors = ["James McGlashan <unreachable@darkfox.id.au>"]
+edition = "2018"
+
+[[bench]]
+name = "blake3-vs-polyval"
+harness = false
+
+[features]
+cpb-bench = ["criterion-cycles-per-byte"]
+
+[dev-dependencies]
+blake3 = "0.1.0"
+polyval = "0.3.3"
+criterion = "0.3.0"
+
+[dependencies.criterion-cycles-per-byte]
+version = "0.1.1"
+optional = true
